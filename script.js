@@ -26,7 +26,28 @@
 	})();
 
 	$(document).ready(function() {
-		$('.post-navigation .btn-disable-hover').remove();
+
+		var prevLink = $('.page-prev .btn'),
+			nextLink = $('.page-next .btn');
+		var temp = prevLink.attr('href');
+		if ( !prevLink.is('a') ) {
+				
+			prevLink.after('<a class="btn btn-link text-default-color btn-icon-left" href="' + nextLink.attr('href')  + '"><i class="fa fa-angle-left"></i><span>Prev</span></a>');
+			prevLink.remove();
+			nextLink.remove();
+
+		} else if ( !nextLink.is('a') ) {
+			
+			nextLink.after('<a class="btn btn-link text-default-color btn-icon-right" href="' + prevLink.attr('href')  + '"><i class="fa fa-angle-right"></i><span>Next</span></a>');
+			nextLink.remove();
+			prevLink.remove();
+
+		} else {
+
+			prevLink.attr('href', nextLink.attr('href'));
+			nextLink.attr('href', temp);
+
+		}
 	});
 	
 })(jQuery);
