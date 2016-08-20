@@ -4,6 +4,7 @@
 	var order = ['Design Research', 'Service Design', 'UX', 'Experimental'];
 	var index = 0;
 	var ordered = false;
+
 	(function reorder() {
 
 		var filterMenu = $('body.home .menu-smart').not('#menu-nav');
@@ -23,4 +24,9 @@
 
 		reorder();
 	})();
+
+	$(document).ready(function() {
+		$('.post-navigation .btn-disable-hover').remove();
+	});
+	
 })(jQuery);
