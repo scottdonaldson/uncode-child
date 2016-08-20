@@ -1,0 +1,27 @@
+/*
+Theme Name: Uncode Child
+Description: Child theme for Uncode theme
+Author: Undsgn™
+Author URI: http://www.undsgn.com
+Template: uncode
+Version: 1.0.0
+Text Domain: uncode
+*/
+
+@font-face{
+	font-family: 'Brandon';
+	src: url('fonts/Brandon.eot');
+	src: url('fonts/Brandon.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/Brandon.woff') format('woff'),
+		 url('fonts/Brandon.ttf') format('truetype'),
+		 url('fonts/Brandon.svg#webfont') format('svg');
+}
+
+@font-face {
+	font-family: 'Brandon-Bold';
+	src: url('fonts/2C6F59_0_0.eot');
+	src: url('fonts/2C6F59_0_0.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/2C6F59_0_0.woff2') format('woff2'),
+		 url('fonts/2C6F59_0_0.woff') format('woff'),
+		 url('fonts/2C6F59_0_0.ttf') format('truetype');
+}
