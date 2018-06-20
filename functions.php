@@ -13,7 +13,7 @@ function theme_enqueue_styles() {
 	$parent_style = 'uncode-style';
 	$child_style = array('uncode-custom-style');
 	wp_enqueue_style($parent_style, get_template_directory_uri() . '/library/css/style.css', array(), $resources_version);
-	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', $child_style, $resources_version);
+	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css');
 
 	wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/script.js', array('jquery'));
 
@@ -30,3 +30,9 @@ function theme_enqueue_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+function title_format($content) {
+	return '%s <img class="password-protected-lock" src="' . get_stylesheet_directory_uri() . '/lock.svg" />';
+}
+add_filter('private_title_format', 'title_format');
+add_filter('protected_title_format', 'title_format');

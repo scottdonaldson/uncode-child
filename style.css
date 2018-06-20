@@ -25,3 +25,11 @@ Text Domain: uncode
 		 url('fonts/2C6F59_0_0.woff') format('woff'),
 		 url('fonts/2C6F59_0_0.ttf') format('truetype');
 }
+
+.password-protected-lock {
+	display: inline-block;
+	vertical-align: middle;
+	top: -0.2em;
+	position: relative;
+	width: 40px;
+}
