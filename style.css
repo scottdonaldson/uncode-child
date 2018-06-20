@@ -28,8 +28,18 @@ Text Domain: uncode
 
 .password-protected-lock {
 	display: inline-block;
+	left: -0.4em;
 	vertical-align: middle;
-	top: -0.2em;
+	top: -0.15em;
 	position: relative;
 	width: 40px;
+}
+
+.password-protected-lock path {
+	fill: #777;
+	transition: fill 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.t-entry-title a:hover path {
+	fill: #03adb0;
 }
